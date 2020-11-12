@@ -1,0 +1,127 @@
+// dev
+$bgcolor: rgb(58, 58, 58);
+$color: rgb(207, 207, 207);
+// $bgcolor: rgb(255, 255, 255);
+// $color: rgb(0, 0, 0);
+
+// dev
+
+* {
+    outline: 1px dashed white;
+    margin: 0;
+    padding: 0;
+    color: $color;
+}
+
+@mixin bg($mixincolor) {
+    background-color: $mixincolor;
+}
+
+html {
+    font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+body {
+    @include bg($bgcolor);
+    font-size: 16px;
+}
+h1 {
+    font-size: 1.17em;
+}
+
+article {
+    width: 100%;
+
+    a {
+        text-decoration: none;
+        &:hover {
+            cursor: pointer;
+            h1,
+            h2 {
+                text-decoration: underline;
+            }
+        }
+    }
+    > header {
+        h1,
+        h2 {
+            color: #2a303b;
+            font-family: "The Antiqua B", Georgia, Droid-serif, serif;
+            span:first-child {
+                background-color: goldenrod;
+                color: white;
+                font-size: 12px;
+                padding: 2px;
+                margin-left: 3px;
+            }
+            text-overflow: ellipsis;
+        }
+        h1 {
+            font-size: 1.7rem;
+            font-weight: 800;
+            line-height: 1.19;
+        }
+
+        h2 {
+            line-height: 1.25;
+            font-size: 1.6rem;
+            font-weight: 800;
+        }
+    }
+    > main {
+        picture {
+            // 360 *240
+            width: 100%;
+
+        }
+        p {
+            font-family: "Marr Sans", Helvetica, Arial, Roboto, sans-serif;
+            // color: #2a303b;
+            display: block;
+            font-size: 1.7rem;
+            line-height: 1.29;
+        }
+    }
+    > footer {
+    }
+}
+// --------------------------------------------------------------main--------------------------------------------------------------
+main#main {
+    width: 100%;
+
+    div.main-container {
+        margin: 0 1.6em;
+        position: relative;
+        display: grid;
+        @media (min-width: 768px) {
+            grid-template: repeat(3);
+        }
+
+        .zone-homepage {
+            .homepage-main article.main {
+            }
+        }
+
+        .zone-friendship {
+        }
+        .zone-sectionroll {
+            .zone-banniere {
+            }
+        }
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}

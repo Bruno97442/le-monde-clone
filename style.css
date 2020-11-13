@@ -1,5 +1,94 @@
-main#main .main-container {
-  margin: 2em;
+* {
+  outline: 1px dashed white;
+  margin: 0;
+  padding: 0;
+  color: #cfcfcf;
+}
+
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, Roboto, sans-serif;
+}
+
+body {
+  background-color: #3a3a3a;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 1.17em;
+}
+
+article {
+  width: 100%;
+}
+
+article a {
+  text-decoration: none;
+}
+
+article a:hover {
+  cursor: pointer;
+}
+
+article a:hover h1,
+article a:hover h2 {
+  text-decoration: underline;
+}
+
+article > header h1,
+article > header h2 {
+  color: #2a303b;
+  font-family: "The Antiqua B", Georgia, Droid-serif, serif;
+  text-overflow: ellipsis;
+}
+
+article > header h1 span:first-child,
+article > header h2 span:first-child {
+  background-color: goldenrod;
+  color: white;
+  font-size: 12px;
+  padding: 2px;
+  margin-left: 3px;
+}
+
+article > header h1 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  line-height: 1.19;
+}
+
+article > header h2 {
+  line-height: 1.25;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+article > main picture {
+  width: 100%;
+}
+
+article > main p {
+  font-family: "Marr Sans", Helvetica, Arial, Roboto, sans-serif;
+  display: block;
+  font-size: 1.7rem;
+  line-height: 1.29;
+}
+
+main#main {
+  width: 100%;
+}
+
+main#main div.main-container {
+  margin: 0 1.6em;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+}
+
+@media (min-width: 768px) {
+  main#main div.main-container {
+    grid-template: repeat(3);
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */

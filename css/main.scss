@@ -11,7 +11,7 @@ $color: rgb(207, 207, 207);
     --pictureMobile: -1.6rem;
 }
 * {
-    outline: 1px dashed white;
+    // outline: 1px dashed white;
     margin: 0;
     padding: 0;
     color: $color;
@@ -34,6 +34,9 @@ h1 {
 
 article {
     width: 100%;
+    margin: 2.4rem 0;
+    padding-top: 2.4rem;
+    border-top: 0.1rem solid #d5d8dc;
 
     a {
         text-decoration: none;
@@ -83,9 +86,12 @@ article {
                 left: var(--pictureMobile);
                 width: calc(100% + var(--mgLRMobile) * 2);
                 // aspect-ratio: 360 / 240;
-                overflow: auto;
                 height: 100%;
                 overflow: hidden;
+                @media (min-width: 768px) {
+                    left: 0;
+                    width: 100%;
+                }
 
                 img {
                     width: 100%;
@@ -122,66 +128,116 @@ article {
 // --------------------------------------------------------------main--------------------------------------------------------------
 main#main {
     width: 100%;
-
+    display: grid;
+    justify-content: center;
     div.main-container {
+        max-width: 100rem;
         margin: 0 var(--mgLRMobile);
         position: relative;
-        display: grid;
-        @media (min-width: 768px) {
-            grid-template: repeat(3);
-        }
 
         .zone-homepage {
-            .homepage-main article.main {
+            border-top: 0.1rem solid #d5d8dc;
+
+            @media (min-width: 1024px) {
+                .homepage-main {
+                    display: grid;
+                    grid-template: repeat(3, auto) / repeat(3, 1fr) 30rem;
+                    grid-column-gap: 2.4rem;
+                    box-shadow: 0 0.2rem #f5f6f8 inset, 0.15rem 0 #f5f6f8 inset, -0.15rem 0 #f5f6f8 inset;
+                    max-width: 100rem;
+                    padding-bottom: 4rem;
+                    margin: 0 auto;
+                    padding-left: 1.6rem;
+                    padding-right: 1.6rem;
+                }
+                .homepage-une {
+                    grid-area: 1/1/2/3;
+                }
+                .homepage-headlines {
+                    display: grid;
+                }
+                .homepage-runner {
+                    grid-area: 2/1/3/4;
+                }
+                .homepage-river{
+                    display: grid;
+                    
+                }
             }
-            .homepage-headlines article.headlines {
+
+            .homepage-une article.une {
+                border-top: none;
+            }
+            .homepage-headlines article.headlines a,
+            .homepage-runner article.runner a {
+                width: 100%;
+                display: grid;
+                grid-template: 100% / 1fr 114px;
                 main {
+                    margin: 0;
+
+                    height: 6.4rem;
                     section.article-media {
-                        position: relative;
-                        width: 11.4rem;
-                        height: 300px;
                         picture.article-picture {
-                            // 360 * 240
-                            top: 0;
                             left: 0;
                             width: 100%;
-                            // aspect-ratio: 360 / 240;
-                            overflow: auto;
-                            height: 100%;
-                            overflow: hidden;
-
-                            img {
-                                width: 100%;
-                                position: absolute;
-                                left: 50%;
-                                top: 50%;
-                                transform: translate(-50%, -50%);
-                                background-color: gray;
-                            }
+                            height: 75.66px;
                         }
                     }
                     p {
                         display: none;
                     }
                 }
-                        footer {
-                            display: none;
+            }
+
+            .homepage-featured article.featured a {
+                @media (min-width: 1024px) {
+                    border-top: 0;
+                    padding-top: 0;
+                    border-bottom: 0;
+                    margin-bottom: 0;
+                    border: 0.1rem solid rgba(0, 0, 0, 0.09);
+                }
+                display: grid;
+                grid-template-rows: auto 50px;
+                header {
+                    position: relative;
+                    box-sizing: border-box;
+                    text-align: center;
+                    top: -2.5rem;
+                    background-color: $bgcolor;
+                    z-index: 1;
+                    width: 90%;
+                    margin: auto;
+                    padding: 1rem;
+
+                    height: auto;
+                }
+                main {
+                    order: -1;
+                    overflow: hidden;
+                    margin: 0;
+                    section.article-media {
+                        picture.article-picture {
+                            left: 0;
+                            width: 100%;
                         }
+                    }
+                }
+                p {
+                    padding: var(--mgLRMobile);
+                }
             }
-            .homepage-runner article.main {
-            }
-            .homepage-featured article.main {
-            }
-            .homepage-river article.main {
-            }
+            // .homepage-river article.main {
+            // }
         }
 
-        .zone-friendship {
-        }
-        .zone-sectionroll {
-            .zone-banniere {
-            }
-        }
+        // .zone-friendship {
+        // }
+        // .zone-sectionroll {
+        //     .zone-banniere {
+        //     }
+        // }
     }
 }
 

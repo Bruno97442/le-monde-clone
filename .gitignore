@@ -1,3 +1,8 @@
-.map
+
+*.map
+
+*.css.map
+
 css/*.css
+
 css/[a-zA-Z].css

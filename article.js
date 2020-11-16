@@ -1,11 +1,11 @@
 const articlesmoteur = (nbr, articleData) => {
-    let p = 
-    `<p>
+    let p =
+        `<p>
     Paragraph ipsum dolor sit amet consectetur adipisicing elit. Quo explicabo natus rerum
     provident numquam dolor eos unde repellendus soluta?
 </p>`,
-    article = (nbr, articleData) => 
-        `<article class="${articleData} article${nbr}">
+        article = (nbr, articleData) =>
+            `<article class="${articleData} article${nbr}">
             <a href="">
 
                 <header>
@@ -14,7 +14,7 @@ const articlesmoteur = (nbr, articleData) => {
                         <span>${articleData} Titre sa mère dolor sit amet consectetur. Maxime odit, cumque atque recusandae!</span>
                     </h${articleData == "une" ? 1 : 2}>
                     ${articleData == "featured" ? p
-                    : ""}
+                : ""}
                 </header>
                 ${articleData == "river2" ? `` : `
                     <main>
@@ -32,20 +32,20 @@ const articlesmoteur = (nbr, articleData) => {
                 `<footer>
                     <ul class="sameway-articles">
                         <li>
-                                <a>
-                                    <span class="puce">lien</span>
+                                <a href="">
+                                    <span class="puce"></span>
                                     provident numquam dolor eos unde repellendus soluta?
                                 </a>
                         </li>
                         <li>
-                                <a>
-                                    <span class="puce">lien</span>
+                                <a href="">
+                                    <span class="puce"></span>
                                     provident numquam dolor eos unde repellendus soluta?
                                 </a>
                         </li>
                     </ul>
                 </footer> `}
-        </article>`, articles =""
+        </article>`, articles = ""
 
     for (let i = 0; i < nbr; i++) {
         articles += article(i, articleData);
@@ -61,3 +61,6 @@ document.querySelectorAll('article[data-c]').forEach(ele => {
 }
 )
 
+document.querySelectorAll('.article-media').forEach(ele => {
+    ele.style.height =  ele.offsetWidth / 1.5 + "px"
+});

@@ -5,7 +5,11 @@ html {
     width:25px;
     height: 25px; 
 }
-
+body > header{
+    width: 100%;
+    overflow: hidden;
+    display: none;
+}
 /* Header*/
 .tabNav{
     display: flex;

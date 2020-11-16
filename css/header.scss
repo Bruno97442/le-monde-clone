@@ -1,0 +1,73 @@
+html {
+    font-family: "Helvetica Neue",Helvetica,Arial,Roboto,sans-serif;
+}
+.tailleImgConnection{
+    width:25px;
+    height: 25px; 
+}
+
+/* Header*/
+.tabNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;    
+    color:black;    
+    width: 100%;
+    height: 50px;
+}
+.tab1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.journal{
+    /* display: flex; */
+    width:70px;
+    height: 60px; 
+}
+.leMonde{
+    /* display: flex; */
+    /* height: 500px;  */
+    margin-left: auto;
+    margin-right: auto;
+    width:200px;
+    justify-content: center;
+}
+.boutton{
+    border-radius: .3rem;
+    cursor: pointer;
+    display: inline-block;
+    width:80px ;
+    height: 50px;
+    background-color: #ffc700;    
+    font-family: Helvetica,Arial,Roboto,sans-serif;
+}
+.separtionHeader{
+    display: flex;
+    background-color:#036487;
+    height: 2pt;
+    /* padding: 0px; */
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto; 
+}
+.sousNav{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around;     */
+    color:white;
+    background-color: #036487; 
+    width: 100%;
+    height: 120px;
+}
+.tableau{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+.secondTab{
+    grid-column: 1 / 6;
+    grid-row: 1 / 6;
+}

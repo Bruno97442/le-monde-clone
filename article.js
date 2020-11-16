@@ -10,8 +10,8 @@ const articlesmoteur = (nbr, articleData) => {
 
                 <header>
                     <h${articleData == "une" ? 1 : 2}>
-                        <span class="puce">${articleData} M</span>
-                        <span>Titre sa mère dolor sit amet consectetur. Maxime odit, cumque atque recusandae!</span>
+                        <span class="puce"></span>
+                        <span>${articleData} Titre sa mère dolor sit amet consectetur. Maxime odit, cumque atque recusandae!</span>
                     </h${articleData == "une" ? 1 : 2}>
                     ${articleData == "featured" ? p
                     : ""}

@@ -4,6 +4,7 @@ $color: rgb(207, 207, 207);
 $bgcolor: rgb(255, 255, 255);
 $color: rgb(0, 0, 0);
 
+$mw_main_container: 100rem;
 // dev
 :root {
     /* margin-l-r mobile body */
@@ -11,12 +12,20 @@ $color: rgb(0, 0, 0);
     --pictureMobile: -1.6rem;
     font-size: 16px;
 }
+
+html{
+    margin: 0;
+    padding: 0;
+}
 * {
     // outline: 1px dashed white;
     margin: 0;
     padding: 0;
+}
+main#main *:not(footer) {
     color: $color;
 }
+
 
 @mixin bg($mixincolor) {
     background-color: $mixincolor;
@@ -140,7 +149,7 @@ main#main {
     background-color: #f5f6f8;
     div.main-container {
         background-color: white;
-        max-width: 100rem;
+        max-width: $mw_main_container;
         margin: 0 var(--mgLRMobile);
         position: relative;
 
@@ -174,7 +183,7 @@ main#main {
                     grid-template: repeat(3, auto) / repeat(3, 1fr) 30rem;
                     grid-column-gap: 2.4rem;
                     box-shadow: 0 0.2rem #f5f6f8 inset, 0.15rem 0 #f5f6f8 inset, -0.15rem 0 #f5f6f8 inset;
-                    max-width: 100rem;
+                    max-width: $mw_main_container;
                     padding-bottom: 4rem;
                     margin: 0 auto;
                     padding-left: 1.6rem;
